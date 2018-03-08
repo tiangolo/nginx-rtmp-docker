@@ -1,8 +1,8 @@
 FROM buildpack-deps:jessie
 
 # Versions of Nginx and nginx-rtmp-module to use
-ENV NGINX_VERSION nginx-1.11.3
-ENV NGINX_RTMP_MODULE_VERSION 1.1.9
+ENV NGINX_VERSION nginx-1.13.5
+ENV NGINX_RTMP_MODULE_VERSION 1.2.1
 
 # Install dependencies
 RUN apt-get update && \
