@@ -1,4 +1,4 @@
-FROM buildpack-deps:xenial
+FROM buildpack-deps:stretch
 
 # Versions of Nginx and nginx-rtmp-module to use
 ENV NGINX_VERSION nginx-1.13.8
