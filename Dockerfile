@@ -1,7 +1,7 @@
 FROM buildpack-deps:stretch
 
 # Versions of Nginx and nginx-rtmp-module to use
-ENV NGINX_VERSION nginx-1.13.8
+ENV NGINX_VERSION nginx-1.15.0
 ENV NGINX_RTMP_MODULE_VERSION 1.2.1
 
 # Install dependencies
