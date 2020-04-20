@@ -12,7 +12,7 @@ do
                     updated=true
                 fi
                 if [[ !  -z  $resolved_ip ]]; then
-                        echo "allow $resolved_ip; #from $ddns_record" >> $temp_file
+                        echo "allow publish $resolved_ip; #from $ddns_record" >> $temp_file
                 fi
         fi
 done < "$filename"
