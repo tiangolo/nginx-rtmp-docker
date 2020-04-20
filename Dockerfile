@@ -8,7 +8,7 @@ ENV NGINX_RTMP_MODULE_VERSION 1.2.1
 
 # Install dependencies
 RUN apt-get update && \
-    apt-get install -y ca-certificates openssl libssl-dev libxml2 libxml2-dev libxslt1.1 libxslt1-dev && \
+    apt-get install -y ca-certificates openssl libssl-dev libxml2 libxml2-dev libxslt1.1 libxslt1-dev cron && \
     rm -rf /var/lib/apt/lists/*
 
 # Download and decompress Nginx
@@ -52,6 +52,14 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log && \
 
 # Set up config file
 RUN mkdir /www
+RUN touch /etc/nginx/allowedhosts.conf
+COPY domain-resolver.sh /domain-resolver.sh
+COPY hostdns.list /hostdns.list
+RUN chmod +x /domain-resolver.sh
+RUN touch /var/log/cron.log
+COPY nginx-allow.cron /etc/cron.d/nginx-allow
+RUN chmod 0644 /etc/cron.d/nginx-allow
+RUN crontab /etc/cron.d/nginx-allow
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY nclients.xsl /www/nclients.xsl
 
