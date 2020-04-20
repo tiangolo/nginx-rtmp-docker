@@ -1,0 +1,1 @@
+ * * * * /domain-resolver.sh /hostdns.list >/dev/null 2>&1
