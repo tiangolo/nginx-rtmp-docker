@@ -1,0 +1,2 @@
+- re enable nginx_status "unknown directive stub_status"
+- figure out aws cli/recordings
