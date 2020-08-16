@@ -98,6 +98,10 @@ You can start from it and modify it as you need. Here's the [documentation relat
 
 * It has a simple default configuration that should allow you to send one or more streams to it and have several clients receiving multiple copies of those streams simultaneously. (It includes `rtmp_auto_push` and an automatic number of worker processes).
 
+## Latest Changes
+
+* Upgrade Nginx to version 1.18.0. PR [#13](https://github.com/tiangolo/nginx-rtmp-docker/pull/13) by [@Nathanael-Mtd](https://github.com/Nathanael-Mtd).
+
 ## License
 
 This project is licensed under the terms of the MIT License.
