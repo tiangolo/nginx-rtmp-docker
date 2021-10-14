@@ -1,4 +1,4 @@
-FROM buildpack-deps:stretch
+FROM buildpack-deps:stretch as builder
 
 LABEL maintainer="Sebastian Ramirez <tiangolo@gmail.com>"
 
@@ -44,6 +44,18 @@ RUN cd /tmp/build/nginx/${NGINX_VERSION} && \
     make install && \
     mkdir /var/lock/nginx && \
     rm -rf /tmp/build
+
+FROM debian:stretch-slim
+
+RUN apt-get update && \
+    apt-get install -y ca-certificates openssl && \
+    rm -rf /var/lib/apt/lists/*
+
+COPY --from=builder /etc/nginx /etc/nginx
+COPY --from=builder /run/nginx /run/nginx
+COPY --from=builder /usr/local/nginx /usr/local/nginx
+COPY --from=builder /usr/local/sbin/nginx /usr/local/sbin/nginx
+COPY --from=builder /var/log/nginx /var/log/nginx
 
 # Forward logs to Docker
 RUN ln -sf /dev/stdout /var/log/nginx/access.log && \
