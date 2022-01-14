@@ -7,6 +7,7 @@ on:
 
 env:
   image_name: tiangolo/nginx-rtmp
+  supported_platforms: "linux/amd64,linux/arm64,linux/386,linux/arm/v7,linux/arm/v6"
 
 jobs:
   build:
@@ -27,6 +28,6 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - uses: docker/build-push-action@v2
         with:
-          platforms: "linux/amd64,linux/arm64,linux/386,linux/arm/v7,linux/arm/v6"
+          platforms: ${{ env.supported_platforms }}
           tags: "${{ env.image_name }}:latest-${{ steps.current-time.outputs.formattedTime }},${{ env.image_name }}:latest"
           push: true
