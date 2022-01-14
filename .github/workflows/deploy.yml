@@ -11,9 +11,3 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: docker/setup-buildx-action@v1
-      # - name: Deploy Image
-      #   run: bash scripts/build-push.sh
-      #   env:
-      #     NAME: latest
-      #     DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-      #     DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
