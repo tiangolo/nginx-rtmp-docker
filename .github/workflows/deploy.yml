@@ -12,6 +12,6 @@ jobs:
       - uses: actions/checkout@v2
       - uses: docker/setup-qemu-action@v1
       - uses: docker/setup-buildx-action@v1
-        id: buildx
       - run: |
-          docker build --platform ${{ steps.buildx.outputs.platforms }} .
+          docker build --platform \
+          "linux/amd64,linux/arm64,linux/386,linux/arm/v7,linux/arm/v6" .
