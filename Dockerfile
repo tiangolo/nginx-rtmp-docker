@@ -4,7 +4,7 @@ LABEL maintainer="Sebastian Ramirez <tiangolo@gmail.com>"
 
 # Versions of Nginx and nginx-rtmp-module to use
 ENV NGINX_VERSION nginx-1.18.0
-ENV NGINX_RTMP_MODULE_VERSION 1.2.1
+ENV NGINX_RTMP_MODULE_VERSION 1.2.2
 
 # Install dependencies
 RUN apt-get update && \
@@ -51,6 +51,10 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log && \
 
 # Set up config file
 COPY nginx.conf /etc/nginx/nginx.conf
+RUN mkdir -p /tmp/hls/live
 
+# RTMP
 EXPOSE 1935
+# HLS
+EXPOSE 8080
 CMD ["nginx", "-g", "daemon off;"]
