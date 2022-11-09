@@ -44,7 +44,7 @@ docker run -d -p 1935:1935 --name nginx-rtmp tiangolo/nginx-rtmp
 * In the "URL" enter the `rtmp://<ip_of_host>/live` replacing `<ip_of_host>` with the IP of the host in which the container is running. For example: `rtmp://192.168.0.30/live`
 * In the "Stream key" use a "key" that will be used later in the client URL to display that specific stream. For example: `test`
 * Click the "OK" button
-* In the section "Sources" click de "Add" button (`+`) and select a source (for example "Screen Capture") and configure it as you need
+* In the section "Sources" click the "Add" button (`+`) and select a source (for example "Screen Capture") and configure it as you need
 * Click the "Start Streaming" button
 
 
