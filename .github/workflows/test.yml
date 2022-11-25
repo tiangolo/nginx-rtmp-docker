@@ -1,4 +1,4 @@
-name: Test
+name: Deploy
 
 on:
   push:
@@ -12,5 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Deploy Image
+      - name: Build Image
         run: bash scripts/build.sh
+        env:
+          NAME: latest
