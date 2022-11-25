@@ -5,7 +5,9 @@ on:
     branches:
       - master
   pull_request:
-    types: [opened, synchronize]
+    types:
+      - opened
+      - synchronize
   schedule:
     # cron every week on monday
     - cron: "0 0 * * 1"
