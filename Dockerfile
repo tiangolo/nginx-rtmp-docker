@@ -51,6 +51,10 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log && \
 
 # Set up config file
 COPY nginx.conf /etc/nginx/nginx.conf
+RUN mkdir -p /tmp/hls/live
 
+# RTMP
 EXPOSE 1935
+# HLS
+EXPOSE 8080
 CMD ["nginx", "-g", "daemon off;"]
