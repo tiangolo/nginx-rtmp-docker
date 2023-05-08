@@ -1,9 +1,9 @@
 FROM buildpack-deps:bullseye
 
-LABEL maintainer="Sebastian Ramirez <tiangolo@gmail.com>"
+LABEL maintainer="MinerBigWhale"
 
 # Versions of Nginx and nginx-rtmp-module to use
-ENV NGINX_VERSION nginx-1.23.2
+ENV NGINX_VERSION nginx-1.24.0
 ENV NGINX_RTMP_MODULE_VERSION 1.2.2
 
 # Install dependencies
@@ -51,6 +51,8 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log && \
 
 # Set up config file
 COPY nginx.conf /etc/nginx/nginx.conf
+COPY index.html /srv/www/index.html
 
+EXPOSE 8080
 EXPOSE 1935
 CMD ["nginx", "-g", "daemon off;"]
