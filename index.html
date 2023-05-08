@@ -8,18 +8,36 @@
   <video
     id="my-video"
     class="video-js"
-    controls
+    controls 
+    autoplay 
+    muted 
     preload="auto"
     width="1280"
     height="720"
     data-setup="{}">
     <source src="stream.m3u8" type="application/vnd.apple.mpegurl" />
     <p class="vjs-no-js">
-      To view this video please enable JavaScript, and consider upgrading to a
-      web browser that
+      To view this video please enable JavaScript, and consider upgrading to a web browser that
       <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
     </p>
   </video>
   <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
+  <script>
+    var myvideo = document.getElementById("my-video")
+    myvideo.addEventListener("onload", function (evt) {
+      if (myvideo.requestFullscreen) {
+        myvideo.requestFullscreen();
+      }
+      else if (myvideo.msRequestFullscreen) {
+        myvideo.msRequestFullscreen();
+      }
+      else if (myvideo.mozRequestFullScreen) {
+        myvideo.mozRequestFullScreen();
+      }
+      else if (myvideo.webkitRequestFullScreen) {
+        myvideo.webkitRequestFullScreen();
+      }
+    }, false);
+  </script>
 </body>
 </html>
