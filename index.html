@@ -15,22 +15,5 @@
     </p>
   </video>
   <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
-  <script>
-    var myvideo = document.getElementById("my-video")
-    myvideo.addEventListener("loadeddata", function (evt) {
-      if (myvideo.requestFullscreen) {
-        myvideo.requestFullscreen();
-      }
-      else if (myvideo.msRequestFullscreen) {
-        myvideo.msRequestFullscreen();
-      }
-      else if (myvideo.mozRequestFullScreen) {
-        myvideo.mozRequestFullScreen();
-      }
-      else if (myvideo.webkitRequestFullScreen) {
-        myvideo.webkitRequestFullScreen();
-      }
-    }, false);
-  </script>
 </body>
 </html>
