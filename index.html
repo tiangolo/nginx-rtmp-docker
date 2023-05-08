@@ -5,16 +5,9 @@
   <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
 </head>
 <body>
-  <video
-    id="my-video"
-    class="video-js"
-    controls 
-    autoplay 
-    muted 
-    preload="auto"
-    width="1280"
-    height="720"
-    data-setup="{}">
+  <video id="my-video" class="video-js"
+    controls autoplay muted preload="auto"
+    width="960" height="540" data-setup="{}">
     <source src="stream.m3u8" type="application/vnd.apple.mpegurl" />
     <p class="vjs-no-js">
       To view this video please enable JavaScript, and consider upgrading to a web browser that
@@ -24,7 +17,7 @@
   <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
   <script>
     var myvideo = document.getElementById("my-video")
-    myvideo.addEventListener("onload", function (evt) {
+    myvideo.addEventListener("loadeddata", function (evt) {
       if (myvideo.requestFullscreen) {
         myvideo.requestFullscreen();
       }
