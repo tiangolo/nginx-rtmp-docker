@@ -1,4 +1,4 @@
-FROM buildpack-deps:bullseye
+FROM debian:bullseye-slim
 
 LABEL maintainer="Sebastian Ramirez <tiangolo@gmail.com>"
 
@@ -8,7 +8,7 @@ ENV NGINX_RTMP_MODULE_VERSION 1.2.2
 
 # Install dependencies
 RUN apt-get update && \
-    apt-get install -y ca-certificates openssl libssl-dev && \
+    apt-get install -y ca-certificates openssl libssl-dev ffmpeg wget build-essential libpcre3 libpcre3 libpcre3-dev zlib1g zlib1g-dev libssl-dev && \
     rm -rf /var/lib/apt/lists/*
 
 # Download and decompress Nginx
