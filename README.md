@@ -127,3 +127,7 @@ You can start from it and modify it as you need. Here's the [documentation relat
 ## License
 
 This project is licensed under the terms of the MIT License.
+
+#### Internal
+
+* 👷 Update latest-changes. PR [#54](https://github.com/tiangolo/nginx-rtmp-docker/pull/54) by [@tiangolo](https://github.com/tiangolo).
