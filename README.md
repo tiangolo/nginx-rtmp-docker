@@ -44,7 +44,7 @@ docker run -d -p 1935:1935 --name nginx-rtmp tiangolo/nginx-rtmp
 * In the "URL" enter the `rtmp://<ip_of_host>/live` replacing `<ip_of_host>` with the IP of the host in which the container is running. For example: `rtmp://192.168.0.30/live`
 * In the "Stream key" use a "key" that will be used later in the client URL to display that specific stream. For example: `test`
 * Click the "OK" button
-* In the section "Sources" click de "Add" button (`+`) and select a source (for example "Screen Capture") and configure it as you need
+* In the section "Sources" click the "Add" button (`+`) and select a source (for example "Screen Capture") and configure it as you need
 * Click the "Start Streaming" button
 
 
@@ -106,6 +106,20 @@ You can start from it and modify it as you need. Here's the [documentation relat
 
 ### Latest Changes
 
+* 👷 Update token for latest changes. PR [#50](https://github.com/tiangolo/nginx-rtmp-docker/pull/50) by [@tiangolo](https://github.com/tiangolo).
+* 👷 Add GitHub Action for Docker Hub description. PR [#45](https://github.com/tiangolo/nginx-rtmp-docker/pull/45) by [@tiangolo](https://github.com/tiangolo).
+* Bump tiangolo/issue-manager from 0.3.0 to 0.4.0. PR [#42](https://github.com/tiangolo/nginx-rtmp-docker/pull/42) by [@dependabot[bot]](https://github.com/apps/dependabot).
+* Bump actions/checkout from 2 to 3. PR [#43](https://github.com/tiangolo/nginx-rtmp-docker/pull/43) by [@dependabot[bot]](https://github.com/apps/dependabot).
+* 🎨 Format CI config. PR [#44](https://github.com/tiangolo/nginx-rtmp-docker/pull/44) by [@tiangolo](https://github.com/tiangolo).
+* 👷 Add Dependabot and funding configs. PR [#41](https://github.com/tiangolo/nginx-rtmp-docker/pull/41) by [@tiangolo](https://github.com/tiangolo).
+* ✨ Allow using debug directives, enable ` --with-debug` compile option. PR [#16](https://github.com/tiangolo/nginx-rtmp-docker/pull/16) by [@agconti](https://github.com/agconti).
+* ⬆️ Upgrade Nginx to 1.23.2 and OS to bullseye. PR [#40](https://github.com/tiangolo/nginx-rtmp-docker/pull/40) by [@tiangolo](https://github.com/tiangolo).
+* ⬆ Upgrade to nginx-1.19.7. PR [#26](https://github.com/tiangolo/nginx-rtmp-docker/pull/26) by [@cesarandreslopez](https://github.com/cesarandreslopez).
+* 👷 Add scheduled CI. PR [#39](https://github.com/tiangolo/nginx-rtmp-docker/pull/39) by [@tiangolo](https://github.com/tiangolo).
+* ⬆ Update RTMP module version to 1.2.2. PR [#28](https://github.com/tiangolo/nginx-rtmp-docker/pull/28) by [@louis70109](https://github.com/louis70109).
+* 👷 Add alls-green GitHub Action. PR [#38](https://github.com/tiangolo/nginx-rtmp-docker/pull/38) by [@tiangolo](https://github.com/tiangolo).
+* 👷 Build to test on CI for PRs, update GitHub Actions. PR [#37](https://github.com/tiangolo/nginx-rtmp-docker/pull/37) by [@tiangolo](https://github.com/tiangolo).
+* ✏️ Fix a typo in README. PR [#20](https://github.com/tiangolo/nginx-rtmp-docker/pull/20) by [@Irishsmurf](https://github.com/Irishsmurf).
 * 👷 Add Latest Changes GitHub Action. PR [#29](https://github.com/tiangolo/nginx-rtmp-docker/pull/29) by [@tiangolo](https://github.com/tiangolo).
 * Add CI with GitHub actions. PR [#15](https://github.com/tiangolo/nginx-rtmp-docker/pull/15).
 * Upgrade Nginx to version 1.18.0. PR [#13](https://github.com/tiangolo/nginx-rtmp-docker/pull/13) by [@Nathanael-Mtd](https://github.com/Nathanael-Mtd).
@@ -113,3 +127,8 @@ You can start from it and modify it as you need. Here's the [documentation relat
 ## License
 
 This project is licensed under the terms of the MIT License.
+
+#### Internal
+
+* 👷 Update dependabot. PR [#55](https://github.com/tiangolo/nginx-rtmp-docker/pull/55) by [@tiangolo](https://github.com/tiangolo).
+* 👷 Update latest-changes. PR [#54](https://github.com/tiangolo/nginx-rtmp-docker/pull/54) by [@tiangolo](https://github.com/tiangolo).

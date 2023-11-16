@@ -1,10 +1,10 @@
-FROM buildpack-deps:stretch
+FROM buildpack-deps:bullseye
 
 LABEL maintainer="Sebastian Ramirez <tiangolo@gmail.com>"
 
 # Versions of Nginx and nginx-rtmp-module to use
-ENV NGINX_VERSION nginx-1.18.0
-ENV NGINX_RTMP_MODULE_VERSION 1.2.1
+ENV NGINX_VERSION nginx-1.23.2
+ENV NGINX_RTMP_MODULE_VERSION 1.2.2
 
 # Install dependencies
 RUN apt-get update && \
@@ -39,7 +39,7 @@ RUN cd /tmp/build/nginx/${NGINX_VERSION} && \
         --with-http_ssl_module \
         --with-threads \
         --with-ipv6 \
-        --add-module=/tmp/build/nginx-rtmp-module/nginx-rtmp-module-${NGINX_RTMP_MODULE_VERSION} && \
+        --add-module=/tmp/build/nginx-rtmp-module/nginx-rtmp-module-${NGINX_RTMP_MODULE_VERSION} --with-debug && \
     make -j $(getconf _NPROCESSORS_ONLN) && \
     make install && \
     mkdir /var/lock/nginx && \

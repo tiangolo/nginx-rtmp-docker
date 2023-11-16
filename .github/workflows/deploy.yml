@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - master
+  schedule:
+    # cron every week on monday
+    - cron: "0 0 * * 1"
 
 env:
   image_name: tiangolo/nginx-rtmp
@@ -11,7 +14,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: srfrnk/current-time@v1.1.0
