@@ -130,6 +130,7 @@ This project is licensed under the terms of the MIT License.
 
 #### Internal
 
+* Bump actions/checkout from 3 to 4. PR [#52](https://github.com/tiangolo/nginx-rtmp-docker/pull/52) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump tiangolo/issue-manager from 0.4.0 to 0.4.1. PR [#61](https://github.com/tiangolo/nginx-rtmp-docker/pull/61) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 👷 Update dependabot. PR [#55](https://github.com/tiangolo/nginx-rtmp-docker/pull/55) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Update latest-changes. PR [#54](https://github.com/tiangolo/nginx-rtmp-docker/pull/54) by [@tiangolo](https://github.com/tiangolo).
