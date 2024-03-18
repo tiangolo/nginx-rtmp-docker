@@ -106,6 +106,10 @@ You can start from it and modify it as you need. Here's the [documentation relat
 
 ### Latest Changes
 
+#### Internal
+
+* 🔧 Update `latest-changes.yml`. PR [#70](https://github.com/tiangolo/nginx-rtmp-docker/pull/70) by [@alejsdev](https://github.com/alejsdev).
+
 ### 0.0.1
 
 #### Features
