@@ -132,6 +132,10 @@ This project is licensed under the terms of the MIT License.
 
 * ✨ Add support for multiarch builds, including ARM (e.g. Mac M1). PR [#65](https://github.com/tiangolo/nginx-rtmp-docker/pull/65) by [@tiangolo](https://github.com/tiangolo).
 
+#### Fixes
+
+* 👷 Fix multiarch deploy build. PR [#66](https://github.com/tiangolo/nginx-rtmp-docker/pull/66) by [@tiangolo](https://github.com/tiangolo).
+
 #### Internal
 
 * ⬆ Bump peter-evans/dockerhub-description from 3 to 4. PR [#63](https://github.com/tiangolo/nginx-rtmp-docker/pull/63) by [@dependabot[bot]](https://github.com/apps/dependabot).
