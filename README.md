@@ -106,6 +106,8 @@ You can start from it and modify it as you need. Here's the [documentation relat
 
 ### Latest Changes
 
+### 0.0.1
+
 #### Features
 
 * ✨ Allow using debug directives, enable ` --with-debug` compile option. PR [#16](https://github.com/tiangolo/nginx-rtmp-docker/pull/16) by [@agconti](https://github.com/agconti).
