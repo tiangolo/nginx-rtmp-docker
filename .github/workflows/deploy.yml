@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - master
+      # TODO: remove this
+      - multiarch
   schedule:
     # cron every week on monday
     - cron: "0 0 * * 1"
@@ -28,8 +30,8 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: |
-            tiangolo/nginx-rtmp:${{ matrix.image.name }}
-            tiangolo/nginx-rtmp:${{ matrix.image.name }}-${{ env.DATE_TAG }} 
+            tiangolo/nginx-rtmp:latest
+            tiangolo/nginx-rtmp:latest-${{ env.DATE_TAG }} 
       - name: Docker Hub Description
         uses: peter-evans/dockerhub-description@v4
         with:
