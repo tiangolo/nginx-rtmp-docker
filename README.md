@@ -108,6 +108,7 @@ You can start from it and modify it as you need. Here's the [documentation relat
 
 #### Internal
 
+* 👷 Update issue-manager.yml GitHub Action permissions. PR [#75](https://github.com/tiangolo/nginx-rtmp-docker/pull/75) by [@tiangolo](https://github.com/tiangolo).
 * 🔧 Add GitHub templates for discussions and issues, and security policy. PR [#72](https://github.com/tiangolo/nginx-rtmp-docker/pull/72) by [@alejsdev](https://github.com/alejsdev).
 * 🔧 Update `latest-changes.yml`. PR [#70](https://github.com/tiangolo/nginx-rtmp-docker/pull/70) by [@alejsdev](https://github.com/alejsdev).
 
