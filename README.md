@@ -108,6 +108,7 @@ You can start from it and modify it as you need. Here's the [documentation relat
 
 #### Internal
 
+* ⬆ Bump docker/setup-buildx-action from 1 to 3. PR [#67](https://github.com/tiangolo/nginx-rtmp-docker/pull/67) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump docker/login-action from 1 to 3. PR [#69](https://github.com/tiangolo/nginx-rtmp-docker/pull/69) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 👷 Update issue-manager.yml GitHub Action permissions. PR [#76](https://github.com/tiangolo/nginx-rtmp-docker/pull/76) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Update issue-manager.yml GitHub Action permissions. PR [#75](https://github.com/tiangolo/nginx-rtmp-docker/pull/75) by [@tiangolo](https://github.com/tiangolo).
