@@ -108,6 +108,7 @@ You can start from it and modify it as you need. Here's the [documentation relat
 
 #### Internal
 
+* ⬆ Bump docker/build-push-action from 5 to 6. PR [#92](https://github.com/tiangolo/nginx-rtmp-docker/pull/92) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 👷 Update `latest-changes` GitHub Action. PR [#93](https://github.com/tiangolo/nginx-rtmp-docker/pull/93) by [@tiangolo](https://github.com/tiangolo).
 * ⬆ Bump docker/build-push-action from 2 to 5. PR [#68](https://github.com/tiangolo/nginx-rtmp-docker/pull/68) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump docker/setup-buildx-action from 1 to 3. PR [#67](https://github.com/tiangolo/nginx-rtmp-docker/pull/67) by [@dependabot[bot]](https://github.com/apps/dependabot).
