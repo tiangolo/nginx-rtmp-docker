@@ -94,6 +94,44 @@ rtmp {
 
 You can start from it and modify it as you need. Here's the [documentation related to `nginx-rtmp-module`](https://github.com/arut/nginx-rtmp-module/wiki/Directives).
 
+## RTMPS (RTMP with TLS)
+
+RTMP is an unencrypted protocol. If you would like to wrap the RTMP session in a TLS session, you can modify the Nginx configuration as show below. This allows the user to stream to rtmps://[domain]:1935. 
+
+Modified `nginx.conf` to utilize RTMPS:
+
+```Nginx
+worker_processes auto;
+rtmp_auto_push on;
+events{}
+
+stream {
+    upstream backend {
+        server 127.0.0.1:1936;
+    }
+    server {
+        listen 1935 ssl;
+        proxy_pass backend;
+        proxy_protocol on;
+        ssl_certificate /etc/letsencrypt/live/[domain]/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/[domain]/privkey.pem;
+    }
+}
+
+rtmp {
+    server {
+        listen 1936 proxy_protocol;
+        chunk_size 4096;
+
+        application live {
+            live on;
+            record off;
+        }
+    }
+}
+
+```
+
 ## Technical details
 
 * This image is built from the same base official images that most of the other official images, as Python, Node, Postgres, Nginx itself, etc. Specifically, [buildpack-deps](https://hub.docker.com/_/buildpack-deps/) which is in turn based on [debian](https://hub.docker.com/_/debian/). So, if you have any other image locally you probably have the base image layers already downloaded.
