@@ -1,14 +1,14 @@
-FROM buildpack-deps:bullseye
+FROM buildpack-deps:bookworm
 
 LABEL maintainer="Sebastian Ramirez <tiangolo@gmail.com>"
 
 # Versions of Nginx and nginx-rtmp-module to use
-ENV NGINX_VERSION nginx-1.23.2
+ENV NGINX_VERSION nginx-1.27.4
 ENV NGINX_RTMP_MODULE_VERSION 1.2.2
 
 # Install dependencies
 RUN apt-get update && \
-    apt-get install -y ca-certificates openssl libssl-dev && \
+    apt-get install -y ca-certificates openssl libssl-dev net-tools && \
     rm -rf /var/lib/apt/lists/*
 
 # Download and decompress Nginx
@@ -47,10 +47,24 @@ RUN cd /tmp/build/nginx/${NGINX_VERSION} && \
 
 # Forward logs to Docker
 RUN ln -sf /dev/stdout /var/log/nginx/access.log && \
-    ln -sf /dev/stderr /var/log/nginx/error.log
+    ln -sf /dev/stderr /var/log/nginx/error.log && \
+	ln -sf /dev/stderr /var/log/nginx/rtmp_access.log
+	
+	
+# RUN mkdir /etc/nginx-default
 
 # Set up config file
-COPY nginx.conf /etc/nginx/nginx.conf
+# COPY /default-files/nginx.conf /etc/nginx-default/nginx.conf
+COPY /default-files/nginx.conf /etc/nginx/nginx.conf
+
+# RUN cp /etc/nginx/*.* /etc/nginx-default
+
+# Copy EntryPoint script
+# COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+# RUN chmod +x /usr/local/bin/entrypoint.sh
+
+# Set the entrypoint
+# ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 
 EXPOSE 1935
 CMD ["nginx", "-g", "daemon off;"]
