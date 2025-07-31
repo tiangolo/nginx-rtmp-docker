@@ -24,6 +24,6 @@ jobs:
         with:
           # To allow latest-changes to commit to master
           token: ${{ secrets.NGINX_RTMP_DOCKER_LATEST_CHANGES }}
-      - uses: tiangolo/latest-changes@0.3.2
+      - uses: tiangolo/latest-changes@0.4.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
