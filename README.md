@@ -108,6 +108,7 @@ You can start from it and modify it as you need. Here's the [documentation relat
 
 #### Internal
 
+* ⬆ Bump actions/checkout from 4 to 5. PR [#104](https://github.com/tiangolo/nginx-rtmp-docker/pull/104) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump tiangolo/latest-changes from 0.3.1 to 0.3.2. PR [#98](https://github.com/tiangolo/nginx-rtmp-docker/pull/98) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump tiangolo/issue-manager from 0.5.0 to 0.5.1. PR [#96](https://github.com/tiangolo/nginx-rtmp-docker/pull/96) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 👷 Update `issue-manager.yml`. PR [#95](https://github.com/tiangolo/nginx-rtmp-docker/pull/95) by [@tiangolo](https://github.com/tiangolo).
