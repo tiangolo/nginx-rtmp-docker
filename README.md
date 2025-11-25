@@ -106,6 +106,8 @@ You can start from it and modify it as you need. Here's the [documentation relat
 
 ### Latest Changes
 
+* 👷 Upgrade actions/checkout from v5 to v6. PR [#109](https://github.com/tiangolo/nginx-rtmp-docker/pull/109) by [@tiangolo](https://github.com/tiangolo).
+
 #### Internal
 
 * 👷 Upgrade `latest-changes` GitHub Action and pin `actions/checkout@v5`. PR [#108](https://github.com/tiangolo/nginx-rtmp-docker/pull/108) by [@tiangolo](https://github.com/tiangolo).
