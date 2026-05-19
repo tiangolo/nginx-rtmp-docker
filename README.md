@@ -112,6 +112,7 @@ You can start from it and modify it as you need. Here's the [documentation relat
 
 #### Internal
 
+* 👷 Update Dependabot. PR [#113](https://github.com/tiangolo/nginx-rtmp-docker/pull/113) by [@tiangolo](https://github.com/tiangolo).
 * ⬆ Bump actions/checkout from 5 to 6. PR [#107](https://github.com/tiangolo/nginx-rtmp-docker/pull/107) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 👷 Upgrade `latest-changes` GitHub Action and pin `actions/checkout@v5`. PR [#108](https://github.com/tiangolo/nginx-rtmp-docker/pull/108) by [@tiangolo](https://github.com/tiangolo).
 * ⬆ Bump tiangolo/latest-changes from 0.3.2 to 0.4.0. PR [#103](https://github.com/tiangolo/nginx-rtmp-docker/pull/103) by [@dependabot[bot]](https://github.com/apps/dependabot).
