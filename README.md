@@ -106,6 +106,7 @@ You can start from it and modify it as you need. Here's the [documentation relat
 
 ### Latest Changes
 
+* ⬆ Bump docker/build-push-action from 6 to 7. PR [#111](https://github.com/tiangolo/nginx-rtmp-docker/pull/111) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * ⬆ Bump docker/setup-buildx-action from 3 to 4. PR [#112](https://github.com/tiangolo/nginx-rtmp-docker/pull/112) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 👷 Upgrade actions/checkout from v5 to v6. PR [#109](https://github.com/tiangolo/nginx-rtmp-docker/pull/109) by [@tiangolo](https://github.com/tiangolo).
 
