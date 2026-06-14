@@ -25,6 +25,14 @@ jobs:
           push: false
           tags: tiangolo/nginx-rtmp:latest
           platforms: linux/amd64,linux/arm64
+      - name: Install FFmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+      - name: Build local image for RTMP test
+        run: docker build -t nginx-rtmp-test .
+      - name: Test RTMP retransmission
+        run: ./scripts/test-rtmp-retransmission.sh nginx-rtmp-test
   check:
     if: always()
     needs:
