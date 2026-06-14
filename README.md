@@ -55,6 +55,29 @@ docker run -d -p 1935:1935 --name nginx-rtmp tiangolo/nginx-rtmp
 * Click "Play"
 * Now VLC should start playing whatever you are transmitting from OBS Studio
 
+## Manual RTMP playback test
+
+You can verify retransmission locally with FFmpeg tools. First build and run the image:
+
+```bash
+docker build -t nginx-rtmp-test .
+docker run --rm --name nginx-rtmp-test -p 1935:1935 nginx-rtmp-test
+```
+
+In a second terminal, publish a generated test stream:
+
+```bash
+./scripts/publish-test-stream.sh
+```
+
+In a third terminal, watch the retransmitted stream:
+
+```bash
+ffplay rtmp://127.0.0.1:1935/live/test
+```
+
+You should see the moving FFmpeg test pattern and hear a generated tone. VLC can also open `rtmp://127.0.0.1:1935/live/test` as a network stream. Stop the publisher with `Ctrl+C` after confirming playback.
+
 ## Debugging
 
 If something is not working you can check the logs of the container with:
