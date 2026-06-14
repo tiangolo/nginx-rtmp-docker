@@ -57,7 +57,7 @@ docker run -d -p 1935:1935 --name nginx-rtmp tiangolo/nginx-rtmp
 
 ## Manual RTMP playback test
 
-You can verify retransmission locally with FFmpeg tools. First build and run the image:
+You can also verify retransmission by watching the stream yourself. First build and run the image:
 
 ```bash
 docker build -t nginx-rtmp-test .
@@ -70,13 +70,15 @@ In a second terminal, publish a generated test stream:
 ./scripts/publish-test-stream.sh
 ```
 
+This publisher is intentionally long-running and will not exit on its own. Leave it running while you watch the stream, then stop it with `Ctrl+C`.
+
 In a third terminal, watch the retransmitted stream:
 
 ```bash
 ffplay rtmp://127.0.0.1:1935/live/test
 ```
 
-You should see the moving FFmpeg test pattern and hear a generated tone. VLC can also open `rtmp://127.0.0.1:1935/live/test` as a network stream. Stop the publisher with `Ctrl+C` after confirming playback.
+You should see the moving FFmpeg test pattern and hear a generated tone. VLC can also open `rtmp://127.0.0.1:1935/live/test` as a network stream.
 
 ## Debugging
 
@@ -116,6 +118,69 @@ rtmp {
 ```
 
 You can start from it and modify it as you need. Here's the [documentation related to `nginx-rtmp-module`](https://github.com/arut/nginx-rtmp-module/wiki/Directives).
+
+## RTMPS (RTMP with TLS)
+
+This image includes Nginx stream SSL support, so you can terminate TLS in Nginx and proxy the decrypted RTMP connection to the RTMP application. With this setup, clients publish and play through `rtmps://<domain>/live/<key>` on port `1935`, while the internal RTMP server listens on `127.0.0.1:1936`.
+
+Create an `nginx.conf` like this, replacing the certificate paths with paths available inside your container:
+
+```Nginx
+worker_processes auto;
+rtmp_auto_push on;
+events {}
+
+stream {
+    upstream backend {
+        server 127.0.0.1:1936;
+    }
+
+    server {
+        listen 1935 ssl;
+        proxy_pass backend;
+        ssl_certificate /etc/nginx/certs/fullchain.pem;
+        ssl_certificate_key /etc/nginx/certs/privkey.pem;
+    }
+}
+
+rtmp {
+    server {
+        listen 1936;
+        chunk_size 4096;
+
+        application live {
+            live on;
+            record off;
+        }
+    }
+}
+```
+
+Then build a small image with your custom configuration:
+
+```Dockerfile
+FROM tiangolo/nginx-rtmp
+
+COPY nginx.conf /etc/nginx/nginx.conf
+```
+
+Run it with your TLS certificates mounted into the container:
+
+```bash
+docker run -d \
+  -p 1935:1935 \
+  -v /path/to/certs:/etc/nginx/certs:ro \
+  --name nginx-rtmps \
+  your-nginx-rtmps-image
+```
+
+For example, if your certificate files are mounted as
+`/etc/nginx/certs/fullchain.pem` and `/etc/nginx/certs/privkey.pem`, configure an
+RTMPS client to use:
+
+```text
+rtmps://<domain>/live/<key>
+```
 
 ## Technical details
 

@@ -28,7 +28,7 @@ jobs:
       - name: Install FFmpeg
         run: |
           sudo apt-get update
-          sudo apt-get install -y ffmpeg
+          sudo apt-get install -y ffmpeg openssl
       - name: Build local image for RTMP test
         run: docker build -t nginx-rtmp-test .
       - name: Test RTMP retransmission
