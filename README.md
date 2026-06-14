@@ -198,6 +198,10 @@ rtmps://<domain>/live/<key>
 * ⬆ Bump docker/setup-buildx-action from 3 to 4. PR [#112](https://github.com/tiangolo/nginx-rtmp-docker/pull/112) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 👷 Upgrade actions/checkout from v5 to v6. PR [#109](https://github.com/tiangolo/nginx-rtmp-docker/pull/109) by [@tiangolo](https://github.com/tiangolo).
 
+#### Features
+
+* ✨ Add support, docs and tests for TLS. PR [#120](https://github.com/tiangolo/nginx-rtmp-docker/pull/120) by [@tiangolo](https://github.com/tiangolo).
+
 #### Internal
 
 * 👷 Add CI tests. PR [#119](https://github.com/tiangolo/nginx-rtmp-docker/pull/119) by [@tiangolo](https://github.com/tiangolo).
