@@ -204,6 +204,7 @@ rtmps://<domain>/live/<key>
 
 #### Internal
 
+* 🔒️ Add zizmor workflow security checks. PR [#124](https://github.com/tiangolo/nginx-rtmp-docker/pull/124) by [@tiangolo](https://github.com/tiangolo).
 * ⬆️ Group Dependabot updates. PR [#123](https://github.com/tiangolo/nginx-rtmp-docker/pull/123) by [@tiangolo](https://github.com/tiangolo).
 * ⬆️ Update Dependabot ecosystem coverage. PR [#122](https://github.com/tiangolo/nginx-rtmp-docker/pull/122) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Add CI tests. PR [#119](https://github.com/tiangolo/nginx-rtmp-docker/pull/119) by [@tiangolo](https://github.com/tiangolo).
