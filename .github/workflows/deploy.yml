@@ -30,7 +30,9 @@ jobs:
         with:
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: "tiangolo/nginx-rtmp:latest\ntiangolo/nginx-rtmp:latest-${{ env.DATE_TAG }} \n"
+          tags: |
+            tiangolo/nginx-rtmp:latest
+            tiangolo/nginx-rtmp:latest-${{ env.DATE_TAG }} 
       - name: Docker Hub Description
         uses: peter-evans/dockerhub-description@1b9a80c056b620d92cedb9d9b5a223409c68ddfa # v5
         with:
