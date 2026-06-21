@@ -204,6 +204,7 @@ rtmps://<domain>/live/<key>
 
 #### Internal
 
+* ⬆️ Group Dependabot updates. PR [#123](https://github.com/tiangolo/nginx-rtmp-docker/pull/123) by [@tiangolo](https://github.com/tiangolo).
 * ⬆️ Update Dependabot ecosystem coverage. PR [#122](https://github.com/tiangolo/nginx-rtmp-docker/pull/122) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Add CI tests. PR [#119](https://github.com/tiangolo/nginx-rtmp-docker/pull/119) by [@tiangolo](https://github.com/tiangolo).
 * ⬆ Bump the github-actions group across 1 directory with 2 updates. PR [#118](https://github.com/tiangolo/nginx-rtmp-docker/pull/118) by [@dependabot[bot]](https://github.com/apps/dependabot).
