@@ -10,8 +10,11 @@ on:
   schedule:
     # cron every week on monday
     - cron: "0 0 * * 1"
+permissions: {}
 jobs:
   test:
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
@@ -33,9 +36,8 @@ jobs:
         run: docker build -t nginx-rtmp-test .
       - name: Test RTMP retransmission
         run: ./scripts/test-rtmp-retransmission.sh nginx-rtmp-test
-    permissions:
-      contents: read
   check:
+    permissions: {}
     if: always()
     needs:
       - test
@@ -45,5 +47,3 @@ jobs:
         uses: re-actors/alls-green@05ac9388f0aebcb5727afa17fcccfecd6f8ec5fe # v1.2.2
         with:
           jobs: ${{ toJSON(needs) }}
-    permissions: {}
-permissions: {}

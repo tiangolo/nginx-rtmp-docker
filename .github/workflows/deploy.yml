@@ -6,8 +6,11 @@ on:
   schedule:
     # cron every week on monday
     - cron: "0 0 * * 1"
+permissions: {}
 jobs:
   deploy:
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
@@ -34,6 +37,3 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           repository: tiangolo/nginx-rtmp
-    permissions:
-      contents: read
-permissions: {}
