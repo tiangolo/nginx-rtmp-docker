@@ -204,6 +204,7 @@ rtmps://<domain>/live/<key>
 
 #### Internal
 
+* 👷 Update issue-manager to 0.7.1. PR [#127](https://github.com/tiangolo/nginx-rtmp-docker/pull/127) by [@tiangolo](https://github.com/tiangolo).
 * ⬆️ Update issue-manager to 0.7.0. PR [#126](https://github.com/tiangolo/nginx-rtmp-docker/pull/126) by [@tiangolo](https://github.com/tiangolo).
 * 🔒️ Add zizmor workflow security checks. PR [#124](https://github.com/tiangolo/nginx-rtmp-docker/pull/124) by [@tiangolo](https://github.com/tiangolo).
 * ⬆️ Group Dependabot updates. PR [#123](https://github.com/tiangolo/nginx-rtmp-docker/pull/123) by [@tiangolo](https://github.com/tiangolo).
