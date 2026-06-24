@@ -12,6 +12,7 @@
 
 ### Internal
 
+* 📝 Refactor release notes, move to its own file. PR [#128](https://github.com/tiangolo/nginx-rtmp-docker/pull/128) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Update issue-manager to 0.7.1. PR [#127](https://github.com/tiangolo/nginx-rtmp-docker/pull/127) by [@tiangolo](https://github.com/tiangolo).
 * ⬆️ Update issue-manager to 0.7.0. PR [#126](https://github.com/tiangolo/nginx-rtmp-docker/pull/126) by [@tiangolo](https://github.com/tiangolo).
 * 🔒️ Add zizmor workflow security checks. PR [#124](https://github.com/tiangolo/nginx-rtmp-docker/pull/124) by [@tiangolo](https://github.com/tiangolo).
@@ -81,4 +82,3 @@
 * ⬆ Bump tiangolo/issue-manager from 0.4.0 to 0.4.1. PR [#61](https://github.com/tiangolo/nginx-rtmp-docker/pull/61) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 👷 Update dependabot. PR [#55](https://github.com/tiangolo/nginx-rtmp-docker/pull/55) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Update latest-changes. PR [#54](https://github.com/tiangolo/nginx-rtmp-docker/pull/54) by [@tiangolo](https://github.com/tiangolo).
-
