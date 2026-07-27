@@ -12,6 +12,7 @@
 
 ### Internal
 
+* ⬆️ Upgrade latest-changes to 0.7.1. PR [#139](https://github.com/tiangolo/nginx-rtmp-docker/pull/139) by [@tiangolo](https://github.com/tiangolo).
 * 🔧 Fix Docker action pin version comments. PR [#137](https://github.com/tiangolo/nginx-rtmp-docker/pull/137) by [@tiangolo](https://github.com/tiangolo).
 * 👷 Fix latest-changes checkout target. PR [#136](https://github.com/tiangolo/nginx-rtmp-docker/pull/136) by [@tiangolo](https://github.com/tiangolo).
 * ⬆️ Update issue-manager to 0.8.1. PR [#134](https://github.com/tiangolo/nginx-rtmp-docker/pull/134) by [@tiangolo](https://github.com/tiangolo).
