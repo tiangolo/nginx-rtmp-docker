@@ -12,6 +12,7 @@
 
 ### Internal
 
+* 🔧 Fix Zizmor version comments. PR [#141](https://github.com/tiangolo/nginx-rtmp-docker/pull/141) by [@tiangolo](https://github.com/tiangolo).
 * 🔥 Remove the old Latest Changes workflow. PR [#140](https://github.com/tiangolo/nginx-rtmp-docker/pull/140) by [@tiangolo](https://github.com/tiangolo).
 * ⬆️ Upgrade latest-changes to 0.7.1. PR [#139](https://github.com/tiangolo/nginx-rtmp-docker/pull/139) by [@tiangolo](https://github.com/tiangolo).
 * 🔧 Fix Docker action pin version comments. PR [#137](https://github.com/tiangolo/nginx-rtmp-docker/pull/137) by [@tiangolo](https://github.com/tiangolo).
