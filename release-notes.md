@@ -12,6 +12,7 @@
 
 ### Internal
 
+* ⬆ Bump the github-actions group across 1 directory with 5 updates. PR [#138](https://github.com/tiangolo/nginx-rtmp-docker/pull/138) by [@dependabot[bot]](https://github.com/apps/dependabot).
 * 🔧 Fix Zizmor version comments. PR [#141](https://github.com/tiangolo/nginx-rtmp-docker/pull/141) by [@tiangolo](https://github.com/tiangolo).
 * 🔥 Remove the old Latest Changes workflow. PR [#140](https://github.com/tiangolo/nginx-rtmp-docker/pull/140) by [@tiangolo](https://github.com/tiangolo).
 * ⬆️ Upgrade latest-changes to 0.7.1. PR [#139](https://github.com/tiangolo/nginx-rtmp-docker/pull/139) by [@tiangolo](https://github.com/tiangolo).
